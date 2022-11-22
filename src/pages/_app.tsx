@@ -35,10 +35,12 @@ export default function App({ Component, pageProps }: AppProps) {
     <NoSSR>
       <WagmiConfig client={wagmiClient}>
         <RainbowKitProvider chains={chains}>
-          <Header />
-          <main className="mt-16 mx-auto px-2 max-w-screen-lg">
-            <Component {...pageProps} />
-          </main>
+          <div data-theme="light" className="bg-base-100 min-h-screen">
+            <Header />
+            <main className="pt-24 mx-auto px-2 max-w-screen-lg">
+              <Component {...pageProps} />
+            </main>
+          </div>
         </RainbowKitProvider>
       </WagmiConfig>
     </NoSSR>
