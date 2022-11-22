@@ -12,7 +12,7 @@ import { Header } from "../components/Header";
 if (!process.env.NEXT_PUBLIC_ALCHEMY_KEY) throw new Error("ALCHEMY_ID");
 
 const { chains, provider } = configureChains(
-  [chain.mainnet, chain.polygon, chain.optimism, chain.arbitrum],
+  [chain.polygon],
   [
     alchemyProvider({ apiKey: process.env.NEXT_PUBLIC_ALCHEMY_KEY }),
     publicProvider(),
